@@ -1,0 +1,75 @@
+.product-description {
+    border: 1px solid #EAEAEA;
+    padding: 65px 0;
+    margin-top: -52px;
+    margin-bottom: 128px;
+    position: relative;
+    background: #fff;
+    @include tablet{
+        margin-top: 0;
+    }
+    .product-description__pretitle {
+        text-transform: uppercase;
+        color: $dark-pink;
+        margin-bottom: 12px;
+        @include font(14px, 16px, 300);
+    }
+
+    .product-description__title-stripe {
+        width: 63px;
+        height: 3px;
+        background: $dark-pink;
+        margin-bottom: 12px;
+    }
+
+    .product-description__title {
+        @include font(18px, 21px, 300);
+        color: $dark-grey;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+        
+    }
+
+    .product-description__text {
+        text-align: center;
+        @include font(14px, 16px, 300);
+        color: $dark-grey;
+        margin-bottom: 32px;
+
+    }
+
+    .product-description__price {
+        text-transform: uppercase;
+        color: $dark-pink;
+        margin-bottom: 65px;
+        @include font(24px, 28px, 300);
+    }
+
+    .product-description__text-stripe {
+        width: 60%;
+        height: 1px;
+        background: #EAEAEA;
+        margin-bottom: 65px;
+    }
+
+    .product-description__button {
+        outline: none;
+        border:none;
+        background: transparent;
+        color: $dark-pink;
+        border: 1px solid $dark-pink;
+        font-family: 'Lato';
+        @include font(16px, 18px);
+        padding: 9px 56px 14px 23px;
+        text-align: center;
+        display: inline-block;
+        margin-top: 48px;
+    } 
+
+    .product-description__button:hover {
+        color: $white;
+        background: $dark-pink;
+    }
+
+}
+

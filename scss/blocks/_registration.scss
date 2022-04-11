@@ -1,0 +1,15 @@
+.registration {
+	background-color: $pink;
+	min-height: 138px;
+
+    .registration__text {
+        color: $dark-pink;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+        padding: 59px 0;
+        @include mobile {
+            text-align: center;
+        }
+    }
+}

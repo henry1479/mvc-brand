@@ -1,0 +1,160 @@
+body {
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19px;
+}
+
+.visually-hidden {
+  	position: absolute;
+ 	width: 1px;
+  	height: 1px;
+  	margin: -1px;
+  	padding: 0;
+  	overflow: hidden;
+  	border: 0;
+  	clip: rect(0 0 0 0)
+}
+
+.position-relative {
+	position: relative;
+}
+
+.active {
+	display: block;
+}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+	@include tablet {
+		width: 95%;
+		margin: 0 auto;
+	}
+	@include mobile {
+		width: 93%;
+		margin: 0 auto;
+	}
+}
+
+
+.menu-icon {
+	color: $white;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.carousel-indicators [data-bs-target] {
+	background: $dark-pink;
+	border: none;
+}
+
+.carousel-inner {
+	background-color: #F7F7F7;
+}
+
+.img-mobile-size {
+	@include mobile {
+		width: 100%;
+	}
+}
+
+.next-arrow,
+.prev-arrow {
+	color: $dark-pink;
+    font-size: 32px;
+    padding: 8px 14px;
+    background: rgb(121, 121, 121);
+}
+
+.next-arrow {
+	margin-left: auto;
+}
+
+.prev-arrow {
+	margin-right: auto;
+}
+
+.dropdown-link {
+	color: $dark-grey;
+	text-transform: uppercase;
+	@include font(14px, 17px);
+	@include mobile {
+		@include font(10px, 12px);
+	}
+}
+
+.dropdown-link:hover {
+	color: $light-grey;
+} 
+
+.cart-icon {
+	margin-right: 22px;
+	font-size: 22px;
+}
+
+
+@keyframes rotate-center {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.row > * {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.btn-group  {
+	border:1px solid $light-grey;;
+	border-radius: 2px;
+	
+	
+}
+
+.btn {
+	color: $light-grey;
+	font-size: 16px;
+	line-height: 19px;
+	@include mobile {
+		padding: 0.2rem 0.4rem;
+	}
+}
+
+.btn:hover {
+	color: $dark-pink;
+}
+
+.btn-arrow {
+	color: #000;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.btn:focus {
+	box-shadow: none;
+}
+
+.nav-link {
+	@include mobile {
+		padding: 0.5rem 0.2rem;
+	}
+    
+}
+
+.me-2 {
+     margin-right: 0!important;
+}
+
+@media (min-width: 576px) {
+	.container, .container-sm {
+		max-width: 95%;
+}
+}	
+
+ 
+

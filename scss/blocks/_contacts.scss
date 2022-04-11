@@ -1,0 +1,134 @@
+.contacts {
+    background-image: url(../img/bg-subscribe.png);
+    padding: 97px 0 126px 0;
+    background-size: cover;
+	@include tablet {
+		padding: 53px 0 140px 0;
+		background-size: auto 100%;
+	}
+	@include mobile {
+		padding: 54px 0 109px 0;
+	}
+    
+    .contacts__wrapper {
+    	display: flex;
+    	justify-content: space-between;
+		@include tablet {
+			flex-direction: column;
+			align-items: center;
+		}
+    }
+    
+    .contacts__feedback {
+    	width: 360px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
+    	text-align: center;
+		@include tablet {
+			padding-bottom: 48px;
+		}
+		@include mobile {
+			width: 100%;
+		}
+    }
+    
+    .contacts__feedback-text {
+    	font-size: 20px;
+    	line-height: 24px;
+    	padding: 30px 0 0 0;
+		@include mobile {
+			@include font(18px,22px)
+		}
+    }
+    
+    .contacts__form {
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: flex-end;
+    }
+    
+    .contacts__form-content {
+    	display: flex;
+    	justify-content: center;
+    	min-height: 49px;
+        margin-bottom: 30px;
+    }
+    
+    .contacts__form-email {
+    	background: $light-gray;
+    	width: 256px;
+    	box-sizing: border-box;
+    	border: none;
+    	border-radius: 20px 0px 0px 20px;
+    	padding: 0 0 0 22px;
+    	font-size: 14px;
+    	line-height: 17px;
+        
+    	outline: none;
+		@include mobile {
+			width: 75%;
+		}
+    }
+    
+    .contacts__form-email:hover,
+    .contacts__form-email:focus {
+    	border: 1px solid red;
+    	background: white;
+    	cursor: pointer;
+    }
+    
+    .contacts__form-button {
+    	width: 100px;
+    	border: none;
+    	border-radius: 0 20px 20px 0;
+    	padding: 0;
+    	background: $dark-pink;
+    	font-size: 14px;
+    	line-height: 17px;
+    	color: $white;
+    	outline: none;
+    }
+    
+    .contacts__form-button:hover,
+    .contacts__form-button:focus {
+    	opacity: 0.5;
+    }
+    
+    .contacts__form-button:active {
+    	opacity: 0.7;
+    }
+    
+    .contacts__form-title {
+    	font-weight: bold;
+    	line-height: 167%;
+    	font-size: 24px;
+    	text-transform: uppercase;
+    	text-align: center;
+		@include mobile {
+			@include font(24px,153%,700);
+		}
+    }
+    
+    .contacts__form-text {
+    	font-size: 18px;
+    	text-transform: uppercase;
+    	text-align: center;
+    	line-height: 167%;
+    	padding: 0 0 32px 0;
+		@include mobile {
+			@include font(14px,21px);
+		}
+    }
+
+    .contacts__form-feedback {
+        
+        
+    }
+
+    .contacts__form-feedback_text {
+        border-radius: 20px;
+        margin-right: 10px;
+    }
+}

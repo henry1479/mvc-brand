@@ -1,0 +1,73 @@
+.catalog-title {
+    background-color: $pink;
+	min-height: 138px;
+    @include mobile {
+        height: 148px;
+    }
+    .catalog-title__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: baseline;
+        @include mobile {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: none;
+        }
+       
+        .catalog__heading {
+            color: $dark-pink;
+            font-size: 24px;
+            line-height: 29px;
+            text-transform: uppercase;
+            padding: 59px 0;
+            @include mobile {
+                text-align: center;
+                padding-top: 24px;
+                padding-bottom: 32px;
+            }
+       }
+       .catalog-title__navbar {
+           display: flex;
+           justify-content: flex-end;
+           color: $gray;
+           text-transform: uppercase;
+           @include mobile {
+               justify-content: center;
+               margin-bottom: 46px;
+           }
+          .catalog-title__item {
+                padding-left: 5px;
+                
+                .catalog-title__link {
+                    @include font(14px, 17px, 300);
+                    text-decoration: none;
+                    color: #636363;
+                    position: relative;
+                    display: block;  
+                }
+                
+
+                .catalog-title__link > span {
+                    visibility: hidden;
+                    margin-right: 5px;
+                }
+                .catalog-title__link:before {
+                    content: attr(data-title);
+                    position: absolute;
+                    @include font(14px, 17px, 300);
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                 
+                }
+                .catalog-title__link:hover,
+                .catalog-title__link:active {
+                    color: $dark-pink;
+                }
+                .catalog-title__link:hover::before {
+                    font-weight: 700;
+                    width: 110%;
+                }
+            }  
+       }
+    }
+}

@@ -1,0 +1,184 @@
+.catalog-products {
+    padding-top: 51px;
+    padding-bottom: 96px;
+    @include tablet {
+        padding-top: 24px;
+        padding-bottom: 74px;
+    }
+    &__nav-wrapper {
+        display: flex;
+        margin-bottom: 65px;
+        @include desktop {
+            justify-content: space-between;
+        }
+        @include tablet {
+            margin-bottom: 43px;
+        }
+    }
+    &__filter {
+        border: none;
+        outline: none;
+        background: transparent;
+        text-transform: uppercase;
+        transition: transform 1s ease;
+        @include font(14px, 16px, 600);
+        margin-right: 27%;
+        @include mobile {
+            margin-right: 0;
+            font-size: 24px;
+        }
+        .filter-icon {
+            margin-left: 11px;
+            @include mobile {
+                margin-left: 0;
+            }
+        }
+
+    }
+
+    &__filter span {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__filter:hover,
+    &__filter:focus {
+        transform: scale(1.1);
+    }
+
+   &__dropdowns-wrapper {
+       display: flex;
+       align-self: center;
+   }
+
+   .catalog-products__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        justify-content: space-between;
+        align-content: space-between;
+        margin: 0 0 48px 0;
+        @include desktop {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        @include tablet {
+            margin-bottom: 40px;
+        }
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            grid-row-gap: 0;
+        }
+    }
+
+    .catalog-products__item {
+        width: 360px;
+        background-color: $gray;
+        position: relative;
+        @include desktop {
+            width: 100%;
+        }
+        @include tablet {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        @include mobile {
+            width: 100%;
+        }
+
+    }
+
+    .catalog-products__item:nth-child(3){
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .catalog-products__overlay-wrapper {
+        position:relative;
+    }
+    
+    .catalog-products__overlay {
+        display: none;
+    }
+    
+    .catalog-products__overlay:before {
+        content: '';
+        width: 100%;
+        min-height: 100%;
+        background:rgba(58,56,56,0.8);
+        position: absolute;
+        top: 0;
+    }
+    
+    .cart {
+        position: absolute;
+        color: $white;
+        background: transparent;
+        border: 1px solid $white;
+        font-size: 14px;
+        line-height: 17px;
+        align-items: center;
+        width: 138px;
+        min-height: 43px;
+        justify-content: space-evenly;
+        outline: none;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        display: none;
+        transition: transform 700ms ease, translate 700ms ease;
+    }
+    
+    .catalog-products__item:hover .catalog-products__overlay {
+        display: block;
+    }
+    
+    .catalog-products__item:hover .cart {
+        display: flex;
+    }
+    
+    .cart:hover {
+        transform: translate(-50%, -35%) scale(1.1);
+    }
+    
+    .catalog-products__item-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .catalog-products__item-heading {
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        padding: 25px 0 12px 18px;
+    }
+    
+    .catalog-products__item-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D5D5D;
+        padding: 0 0 18px 18px;
+        width: 314px;
+        @include tablet {
+            width: 90%;
+        }
+        @include mobile {
+            width: 91%;
+        }
+    }
+    
+    .catalog-products__item-price {
+        line-height: 19px;
+        color: $dark-pink;
+        padding: 0 0 18px 18px;
+    }
+    
+}
+
