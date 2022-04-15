@@ -1,5 +1,5 @@
 <?php
-print_r($goods); 
+echo $phone;
 ?>
 
 
@@ -64,20 +64,20 @@ print_r($goods);
             ?>
             <div class="cart-content__buttons-wrapper">
                 <button type="button" class="cart-content__reset">Clear shopping-cart</button>
-                <a href="./index.php?c=cart&Order" class="cart-content__redirect">Make order</a>
             </div>
         </div>
         <div class=" cart-content__wrapper cart-content__wrapper--right">
-            <form action="#" method="POST" class="cart-content__form">
+            <form  method="POST" class="cart-content__form">
                 <fieldset class="cart-content__group">
                     <legend class="cart-content__form-title">shipping adress</legend>
-                    <input class="cart-content__form-country" type="text" id="country" placeholder="Bangladesh">
-                    <input type="text" id="state" class="cart-content__form-country" placeholder="Last name"
-                        value="State">
-                    <input class="cart-content__form-country" type="text" id="code" value="Postcode / Zip">
+                    <input class="cart-content__form-country" type="tel" id="country" name="customer_phone" placeholder="phone" required>
+                    <input type="email" name="customer_email" id="state" class="cart-content__form-country" placeholder="email" required>
+                    <input class="cart-content__form-country" type="text" name ="customer_adress" id="code" placeholder="Adress">
 
                 </fieldset>
-                <button type="submit" class="cart-content__form-button">Get a quote </button>
+               <a href="index.php?c=cart&act=Order">
+                <button name="order_submit" type="submit" class="cart-content__form-button">Create Order</button>
+               </a>
             </form>
             <?php
                 $sum = 0;

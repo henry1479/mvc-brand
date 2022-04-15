@@ -24,9 +24,6 @@ class C_Cart extends C_Base
     //выводим корзину с товарами
     public function actionIndex() 
     {    
-       
-
-        
         $this->content = $this->template('v/v_cart.php', 
             array(
                 'goods'=> $this->goods
@@ -43,11 +40,31 @@ class C_Cart extends C_Base
     }
 
 
-    public function actionOrder(string $adress, string $tel)
+    public function actionOrder()
     {
+       foreach ($this->goods as $good) {
+           $goods_ids[$good['name']] = $good['count'];
+       }
+
+       if($_POST) {
+           $phone = strip_tags($_POST["customer_phone"]);
+           $email = strip_tags($_POST["customer_email"]);
+           $adress = strip_tags($_POST["customer_adress"]);
+       }
+
+       $dataId = json_encode($goods_ids);
+       Cart::createOrder($dataId, $phone, $email, $adress);
+       $_POST = [];
+       $this->content = $this->template('v/v_cart.php', 
+            array(
+                'goods'=> [],
+                'phone'=> $phone
+            )
+        );
+    
         
     }
-
+        
 
 
 

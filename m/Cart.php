@@ -71,6 +71,19 @@ class Cart {
         );
     }
 
+    static function createOrder($userId = null, $idData,$phone, $email, $adress)
+    {
+        return DB::Insert("INSERT INTO `orders`(user_id, good_ids, customer_phone, customer_email, customer_adress) VALUES (:user_id, :ids, :phone, :email, :adress)",
+        [
+            "user_id" => $userId,
+            "ids" => $idData,
+            "phone" => $phone,
+            "email" => $email,
+            "adress"=> $adress
+        ]
+        );
+    }
+
 
 
     
